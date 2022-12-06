@@ -133,8 +133,8 @@ body {
 .email__form__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .form__container {
@@ -174,19 +174,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 100%; */
 }
 
 .feature__details {
   text-align: left;
   padding: 0 6rem;
-  /* width: 65%; */
 }
 
 .feature__title {
-  /* font-size: 40px;
-  font-weight: 600;
-  margin: 10px 0; */
   font-size: 3.125rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
@@ -269,26 +264,9 @@ body {
   height: 100%;
 }
 
-.feature__3__backgroud__video__container {
-  max-width: 63%;
-  max-height: 47%;
-  z-index: -1;
-  top: 9%;
-  left: 19%;
+.feature__3__image__container {
+  width: 70%;
 }
-
-/* .accordion {
-  background-color: #000;
-  color: #fff;
-} */
-
-.accordion-item {
-  width: 100%;
-}
-
-/* .FAQ__accordian {
-  width: 100%;
-} */
 
 .accordion-button {
   width: 100%;
@@ -300,57 +278,69 @@ body {
   border: 1px solid #303030;
   color: white;
 }
-/* .FAQ__title {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  font-size: 18px;
-  background-color: #303030;
-  border: 1px solid #303030;
+
+@import url("https://use.fontawesome.com/releases/v5.15.0/css/all.css");
+.accordion-button:not(.collapsed)::after {
+  content: "\58";
+  font-family: "Font Awesome 5 Free";
   color: white;
-} */
+  background-image: none;
+}
+
+.accordion-button.collapsed::after {
+  /* content: "\f057";  x*/
+  /* content: "\f058";  check*/
+  /* "\f067"  plus*/
+  /* "\f068"  minus*/
+  content: "\2b";
+  color: white;
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free";
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: #303030;
+  box-shadow: none;
+}
 
 .accordion-body {
   background-color: #303030;
+  color: #fff;
   border-top: 1px solid black;
-  max-height: 0;
+  /* max-height: 0; */
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
-
-/* .FAQ__visible {
-  background-color: #303030;
-  border-top: 1px solid black;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-} */
 
 .accordion-body > p {
   margin: 1rem;
+  color: #fff;
 }
-
-/* .FAQ__visible > p {
-  margin: 1rem;
-} */
 
 .accordion {
   border-top: 8px solid #222;
   padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
 }
-/* .FAQ__list__container {
-  border-top: 8px solid #222;
-  padding: 2rem 0;
-} */
+
 .FAQ__heading {
-  /* font-size: 20px; */
   text-align: center;
-  /* font-weight: 600; */
-  /* margin: 1rem 3rem; */
+
   font-size: 3.125rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
+}
+
+.accordion-item {
+  margin-bottom: 1.25rem auto;
+  border: none;
+  width: 75%;
 }
 
 .FAQ__list {
@@ -361,10 +351,6 @@ body {
   gap: 10px;
 }
 
-.FAQ__get__started__email {
-  text-align: center;
-}
-
 .FAQ__get__started__email > h3 {
   font-size: 18px;
   font-weight: 400;
@@ -373,11 +359,16 @@ body {
 
 footer {
   border-top: 8px solid #333;
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
+  padding: 3% 8%;
   color: #757575;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.footer-div {
+  width: 75%;
 }
 
 .footer__row__2 {
@@ -385,11 +376,13 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
+  padding-bottom: 30px;
 }
 
 .footer__row__1 > h4 {
   font-size: 15px;
   font-weight: 500;
+  padding-bottom: 30px;
 }
 
 .footer__row__3 > .dropdown__container {
@@ -464,12 +457,12 @@ footer {
   justify-content: center;
   transform: translateX(15%);
 }
-footer {
+/* footer {
   padding: 2rem 20rem;
   justify-content: flex-start;
   text-align: left;
   align-items: flex-start;
-}
+} */
 
 .footer__row__2 {
   justify-content: space-between;
